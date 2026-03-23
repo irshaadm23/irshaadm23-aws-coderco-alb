@@ -80,3 +80,10 @@ the Auto Scaling Group automatically launched a replacement instance
 desired capacity was restored without manual intervention
 
 This validated the architecture as a self-healing load-balanced setup rather than a single-instance deployment.
+
+
+Notes
+
+Although the final traffic path was tested through the ALB, public IPs were temporarily useful during setup to validate EC2 user data and confirm the web server was working correctly.
+
+For a more production-hardened version of this project, the backend instances would be moved fully behind the ALB with tighter inbound restrictions and no direct public exposure.
