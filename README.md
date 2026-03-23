@@ -87,3 +87,10 @@ Notes
 Although the final traffic path was tested through the ALB, public IPs were temporarily useful during setup to validate EC2 user data and confirm the web server was working correctly.
 
 For a more production-hardened version of this project, the backend instances would be moved fully behind the ALB with tighter inbound restrictions and no direct public exposure.
+
+Improvements:
+
+Enforce HTTP → HTTPS redirection at the ALB
+Restrict EC2 inbound access to the ALB security group only
+Move backend EC2 instances fully into private subnets
+Add AWS WAF in front of the ALB for request filtering
